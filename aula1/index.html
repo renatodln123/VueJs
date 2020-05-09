@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula1</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1> {{ titulo }} </h1>
+        <div v-if="usuario.id == 1">
+            Id:  {{ usuario.id }} <br>
+            Nome: {{ usuario.nome }} <br>
+            Profissao: {{ usuario.profissao }}
+        </div>
+        <div v-else="O Id do usuario não é igual a 1 "></div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "AULA 1 - VENHA ASSISTIR",
+                usuario: {
+                    id: 1,
+                    nome: "Renato Rodrigues",
+                    profissao: "desenvolvedor"
+                }
+            }
+        })
+    </script>
+
+    
+</body>
+</html>
